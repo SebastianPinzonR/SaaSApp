@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+<!-- si se va a utilizar extends, se tiene que poner los bloques que se van a utilizar -->
+
+<!-- esto no lo muestra -->
+<p>Hola otra vez </p>
+
+{% block head_title %}
+{{block.super}} Home Page{% endblock head_title %}
+
+<!-- esto sobreescribe el bloque content de base.html -->
+{% block content %}
+<p>Hola tercer intento</p>
+
+{% include "snippets/welcome_user_msg.html" %}
+
+{% endblock content %} 
